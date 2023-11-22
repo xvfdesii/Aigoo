@@ -1,9 +1,11 @@
 # Kelompok 7 PBO
 
 Ketua = Chalifahdien Hamud
-Anggota = 
+Anggota =
+
 1.  dkdksd
 2.  fnsfnsfn
-3. umar faruq manek 
-4. alif
-5. desii
+3.  umar faruq manek
+4.  alif
+5.  desii
+6.  Nuzul
