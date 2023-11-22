@@ -1,12 +1,14 @@
 # Kelompok 7 PBO
 
-Ketua = Chalifahdien Hamud
-Anggota =
+Website Parawisata 
 
-1.  dkdksd
-2.  fnsfnsfn
-3.  umar faruq manek
-4.  alif
-5.  desii
-6.  iqbal
-7.  Rafly
+Ketua = Chalifahdien Hamud
+Anggota = 1. Dwi Pratiwi 
+          2. Umar Faruq Manek 
+          3. Wa Ode Asriyani
+          4. Rafli Ahmad
+          5. Nuzul Gusti
+          6. Nur Hafizah 
+          7. Israwal
+
+
