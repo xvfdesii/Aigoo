@@ -71,7 +71,7 @@ https://templatemo.com/tm-564-plot-listing
                                     <ul class="nav">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="category.html">Category</a></li>
-                                        <li><a href="listing.html" class="active">Listing</a></li>
+                                        <li><a href="listing.php" class="active">Listing</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>
                                         <li>
                                             <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i>
@@ -159,8 +159,7 @@ https://templatemo.com/tm-564-plot-listing
                                                 <ul class="nacc">
                                                     <!-- first category listing of items -->
                                                     <?php
-	$connect=mysqli_connect("localhost","root","","db_pariwisata");
-	?>
+	$connect=mysqli_connect("localhost","root","","db_pariwisata");?>
                                                     <li class="active">
                                                         <div>
                                                             <div class="col-lg-12">
