@@ -13,6 +13,7 @@ Anggota = 1. Dwi Pratiwi
           7. Muh Irhan Israwal
           8. Harnelia
           9. Dela Puspita Helmi
+          10. Suci Wulandari
         
 =======
 
