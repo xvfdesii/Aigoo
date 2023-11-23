@@ -10,7 +10,7 @@ Anggota = 1. Dwi Pratiwi
           4. Rafli Ahmad
           5. Nuzul Gusti
           6. Nur Hafiizah
-          7. Israwal
+          7. Muh Irhan Israwal
           8. Harnelia
           9. Dela Puspita Helmi
         
