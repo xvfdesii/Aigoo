@@ -12,6 +12,7 @@ Anggota = 1. Dwi Pratiwi
           6. Nur Hafiizah
           7. Israwal
           8. Harnelia
+          9. Dela Puspita Helmi
         
 =======
 
