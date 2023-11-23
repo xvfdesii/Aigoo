@@ -247,7 +247,7 @@ https://templatemo.com/tm-564-plot-listing
                                                         </div>
                                                         <div class="col-lg-7 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="assets/images/tabs-image-01.jpg" alt="">
+                                                                <img src="assets/images/bromo1.jpeg" alt="">
                                                             </div>
                                                         </div>
                                                     </div>
