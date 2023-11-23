@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>Aplikasi Parawisata Kelompok 7</title>
+    <title>Parawisata Kelompok 7</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -122,7 +122,7 @@ https://templatemo.com/tm-564-plot-listing
                                         onchange="this.form.click()">
                                         <option selected>All Areas</option>
                                         <option value="New Village">New Village</option>
-                                        <option value="Old Town">Old Town</option>
+                                        <option value="Old Town">Old down</option>
                                         <option value="Modern City">Modern City</option>
                                     </select>
                                 </fieldset>
