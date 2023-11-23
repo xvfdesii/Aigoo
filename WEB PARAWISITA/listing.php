@@ -114,11 +114,7 @@ https://templatemo.com/tm-564-plot-listing
                     </div>
                     <div>
                       <div class="thumb">                 
-<<<<<<< HEAD:WEB PARAWISITA/listing.php
                         <span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt=""></span>
-=======
-                        <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
->>>>>>> 41ad39c51ae97002a7ffe066b0584344b6c0bae3:WEB PARAWISITA/listing.php
                         Kota Bersejarah
                       </div>
                     </div>
@@ -225,9 +221,14 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="item">
                               <div class="row">
                                 <div class="col-lg-12">
+                                <?php
+                                $sql="SELECT * From gunung where id=4";
+                                $hasil=mysqli_query($connect,$sql);
+                                $data=mysqli_fetch_row($hasil)
+                                ?>
                                   <div class="listing-item">
                                     <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
+                                      <a href="#"><img src="assets/images/<?php echo $data[7]; ?>" alt="" ></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
                                           <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
@@ -235,11 +236,11 @@ https://templatemo.com/tm-564-plot-listing
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Sunshine Villa Condo</h4></a>
-                                      <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <a href="#"><h4><?php echo $data[1]; ?></h4></a>
+                                      <h6><?php echo $data[2]; ?></h6>
+                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div><?php echo $data[5]; ?></span>
+                                      <span class="details">Deskripsi: <em><?php echo $data[3]; ?></em></span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> <?php echo $data[4]; ?><br></span>
                                     </div>
                                   </div>
                                 </div>

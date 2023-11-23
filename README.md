@@ -11,6 +11,7 @@ Anggota = 1. Dwi Pratiwi
           5. Nuzul Gusti
           6. Nur Hafiizah
           7. Israwal
+          8. Harnelia
         
 =======
 
@@ -22,6 +23,7 @@ Anggota =
 5. Nuzul Gusti
 6. Nur Hafiizah 
 7. Israwal
+8. Harnelia
 >>>>>>> 30708f0dd1763adb406db679fefd0ac452b0b1e6
 
 
