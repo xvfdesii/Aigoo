@@ -247,7 +247,7 @@ https://templatemo.com/tm-564-plot-listing
                                                         </div>
                                                         <div class="col-lg-7 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="assets/images/tabs-image-01.jpg" alt="">
+                                                                <img src="assets/images/bromo1.jpeg" alt="">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -272,7 +272,7 @@ https://templatemo.com/tm-564-plot-listing
                                                         </div>
                                                         <div class="col-lg-7 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="assets/images/banner-bg.jpg"
+                                                                <img src="assets/images/banner-bg.jpeg"
                                                                     alt="Foods on the table">
                                                             </div>
                                                         </div>
@@ -398,6 +398,102 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="340" height="360"></a>';
+                                                    echo '</div>';
+                                                    echo '<div class="right-content align-self-center">';
+                                                        echo '<a href="#">';
+                                                            echo '<h4>' . $counter .'. '. $wisata->nama . '</h4>';
+                                                        echo '</a>';
+                                                        echo '<ul class="rate">';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li>(100) Reviews</li>';
+                                                        echo '</ul>';
+                                                        echo '<span class="price">';
+                                                            echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt="">';
+                                                            echo '</div> Rp.'. $wisata->harga .'';
+                                                        echo '</span>';
+                                                        echo '<span class="details">Details: <em> <br>'. $wisata->deskripsi .'</em></span>';
+                                                        echo '<ul class="info">';
+                                                            echo '<li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>';
+                                                            echo '<li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms';
+                                                            echo '</li>';
+                                                        echo '</ul>';
+                                                        echo '<div class="main-white-button">';
+                                                            echo '<a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>';
+                                                        echo '</div>';
+                                                    echo '</div>';
+                                                echo '</div>';
+                                            echo '</div>';
+                                            $counter++;
+                                        } else {
+                                            break; // Exit the loop after displaying three items
+                                        }
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <?php
+                                    $counter = 4;
+                                    foreach ($pantaiList as $wisata) {
+                                        if ($counter < 7) {
+                                            echo '<div class="col-lg-12">';
+                                                echo '<div class="listing-item">';
+                                                    echo '<div class="left-image">';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="400" height="350"></a>';
+                                                    echo '</div>';
+                                                    echo '<div class="right-content align-self-center">';
+                                                        echo '<a href="#">';
+                                                            echo '<h4>' . $counter .'. '. $wisata->nama . '</h4>';
+                                                        echo '</a>';
+                                                        echo '<ul class="rate">';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li>(100) Reviews</li>';
+                                                        echo '</ul>';
+                                                        echo '<span class="price">';
+                                                            echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt="">';
+                                                            echo '</div> Rp.'. $wisata->harga .'';
+                                                        echo '</span>';
+                                                        echo '<span class="details">Details: <em> <br>'. $wisata->deskripsi .'</em></span>';
+                                                        echo '<ul class="info">';
+                                                            echo '<li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>';
+                                                            echo '<li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms';
+                                                            echo '</li>';
+                                                        echo '</ul>';
+                                                        echo '<div class="main-white-button">';
+                                                            echo '<a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>';
+                                                        echo '</div>';
+                                                    echo '</div>';
+                                                echo '</div>';
+                                            echo '</div>';
+                                            $counter++;
+                                        } else {
+                                            break; // Exit the loop after displaying three items
+                                        }
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <?php
+                                    $counter = 7;
+                                    foreach ($gunungList as $wisata) {
+                                        if ($counter < 10) {
+                                            echo '<div class="col-lg-12">';
+                                                echo '<div class="listing-item">';
+                                                    echo '<div class="left-image">';
                                                         echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="300" height="250"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
@@ -434,10 +530,9 @@ https://templatemo.com/tm-564-plot-listing
                                             break; // Exit the loop after displaying three items
                                         }
                                     }
-                            echo '</div>';
-                        echo '</div>';
-                        }
-                        ?>
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
