@@ -83,7 +83,6 @@ https://templatemo.com/tm-564-plot-listing
             <div class="row">
                 <div class="col-lg-12">
                     <div class="top-text header-text">
-                        <h6>Over 36,500+ Active Listings</h6>
                         <h2>Cari Tempat Wisata Yang Kamu Mau</h2>
                     </div>
                 </div>
@@ -350,8 +349,7 @@ https://templatemo.com/tm-564-plot-listing
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Recent Listing</h2>
-                        <h6>Check Them Out</h6>
+                        <h2>Tempat Wisata paling banyak di cari bulan ini</h2>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -365,20 +363,19 @@ https://templatemo.com/tm-564-plot-listing
                                         </div>
                                         <div class="right-content align-self-center">
                                             <a href="#">
-                                                <h4>1. First Apartment Unit</h4>
+                                                <h4>gunung Bromo</h4>
                                             </a>
-                                            <h6>by: Sale Agent</h6>
                                             <ul class="rate">
                                                 <li><i class="fa fa-star-o"></i></li>
                                                 <li><i class="fa fa-star-o"></i></li>
                                                 <li><i class="fa fa-star-o"></i></li>
                                                 <li><i class="fa fa-star-o"></i></li>
                                                 <li><i class="fa fa-star-o"></i></li>
-                                                <li>(18) Reviews</li>
+                                                <li>(100) Reviews</li>
                                             </ul>
                                             <span class="price">
                                                 <div class="icon"><img src="assets/images/listing-icon-01.png" alt="">
-                                                </div> $450 - $950 / month with taxes
+                                                </div> text
                                             </span>
                                             <span class="details">Details: <em>2760 sq ft</em></span>
                                             <ul class="info">
