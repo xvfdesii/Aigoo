@@ -79,24 +79,32 @@ https://templatemo.com/tm-564-plot-listing
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                        </a>
+                        <a href="index.php" class="logo"></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
+                        <!-- <ul class="nav">
                             <li><a href="index.html" class="active">Home</a></li>
                             <li><a href="category.html">Category</a></li>
                             <li><a href="listing.php">Listing</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                             <li>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your
-                                        Listing</a></div>
+                                <div class="main-white-button">
+                                    <a href="#">
+                                        <i class="fa fa-plus"></i> Add Your Listing
+                                    </a>
+                                </div>
                             </li>
-                        </ul>
+                        </ul> -->
+                            <!-- Form for search -->
+                        <form class="nav" action="search.php#kesini" method="post">
+                            <input type="text" name="search" id="search" placeholder="Cari Tempat Wisata">
+                            <input type="submit" value="Search">
+                        </form>
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
                         <!-- ***** Menu End ***** -->
+                            <!-- Form for search -->
                     </nav>
                 </div>
             </div>
@@ -112,7 +120,7 @@ https://templatemo.com/tm-564-plot-listing
                         <h2>Cari Tempat Wisata Yang Kamu Mau</h2>
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <!-- <div class="col-lg-12">
                     <form id="search-form" name="gs" method="submit" role="search" action="#">
                         <div class="row">
                             <div class="col-lg-3 align-self-center">
@@ -151,20 +159,14 @@ https://templatemo.com/tm-564-plot-listing
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
                 <div class="col-lg-10 offset-lg-1">
                     <ul class="categories">
-                        <li><a href="category.html"><span class="icon"><img src="assets/images/mountain-svgrepo-com.svg"
-                                        alt="Home"></span> Gunung</a></li>
-                        <li><a href="listing.html"><span class="icon"><img
-                                        src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp;
-                                Pulau</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg"
-                                        alt="Vehicle"></span> Kota Bersejarah</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg"
-                                        alt="Shopping"></span>Warisan budaya</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"
-                                        alt="Travel"></span> Resort &amp; Spa</a></li>
+                        <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
+                        <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp; Pulau</a></li>
+                        <li><a href="#"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
+                        <li><a href="#"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
+                        <li><a href="#"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
                     </ul>
                 </div>
             </div>
