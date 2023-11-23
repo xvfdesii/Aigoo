@@ -121,7 +121,7 @@ https://templatemo.com/tm-564-plot-listing
                                         onchange="this.form.click()">
                                         <option selected>All Areas</option>
                                         <option value="New Village">New Village</option>
-                                        <option value="Old Town">Old Town</option>
+                                        <option value="Old Town">Old down</option>
                                         <option value="Modern City">Modern City</option>
                                     </select>
                                 </fieldset>
