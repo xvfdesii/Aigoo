@@ -99,20 +99,20 @@ https://templatemo.com/tm-564-plot-listing
                   <div class="menu">
                     <div class="first-thumb active">
                       <div class="thumb">
-                        <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                        Apartments
+                        <span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt=""></span>
+                        Gunung
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                        Food &amp; Life
+                        <span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt=""></span>
+                        Pantai &amp; Pulau
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                        Cars
+                        Kota Bersejarah
                       </div>
                     </div>
                     <div class="last-thumb">
