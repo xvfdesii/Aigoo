@@ -437,7 +437,7 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
-                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="400" height="400"></a>';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="360" height="360"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
                                                         echo '<a href="#">';
@@ -485,7 +485,7 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
-                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="300" height="250"></a>';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="360" height="360"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
                                                         echo '<a href="#">';
