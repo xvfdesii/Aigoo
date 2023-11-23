@@ -389,7 +389,7 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
-                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="360" height="360"></a>';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="340" height="360"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
                                                         echo '<a href="#">';
