@@ -261,7 +261,7 @@ https://templatemo.com/tm-564-plot-listing
                                                         </div>
                                                         <div class="col-lg-7 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="assets/images/banner-bg.jpg"
+                                                                <img src="assets/images/banner-bg.jpeg"
                                                                     alt="Foods on the table">
                                                             </div>
                                                         </div>
