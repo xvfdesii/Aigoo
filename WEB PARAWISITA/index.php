@@ -120,53 +120,14 @@ https://templatemo.com/tm-564-plot-listing
                         <h2>Cari Tempat Wisata Yang Kamu Mau</h2>
                     </div>
                 </div>
-                <!-- <div class="col-lg-12">
-                    <form id="search-form" name="gs" method="submit" role="search" action="#">
-                        <div class="row">
-                            <div class="col-lg-3 align-self-center">
-                                <fieldset>
-                                    <select name="area" class="form-select" aria-label="Area" id="chooseCategory"
-                                        onchange="this.form.click()">
-                                        <option selected>All Areas</option>
-                                        <option value="New Village">New Village</option>
-                                        <option value="Old Town">Old Town</option>
-                                        <option value="Modern City">Modern City</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-3 align-self-center">
-                                <fieldset>
-                                    <input type="address" name="address" class="searchText"
-                                        placeholder="Enter a location" autocomplete="on" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-3 align-self-center">
-                                <fieldset>
-                                    <select name="price" class="form-select" aria-label="Default select example"
-                                        id="chooseCategory" onchange="this.form.click()">
-                                        <option selected>Price Range</option>
-                                        <option value="$100 - $250">$100 - $250</option>
-                                        <option value="$250 - $500">$250 - $500</option>
-                                        <option value="$500 - $1000">$500 - $1,000</option>
-                                        <option value="$1000+">$1,000 or more</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-3">
-                                <fieldset>
-                                    <button class="main-button"><i class="fa fa-search"></i> Search Now</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div> -->
+
                 <div class="col-lg-10 offset-lg-1">
                     <ul class="categories">
                         <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
                         <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp; Pulau</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
+                        <li><a href="category.php?category=tempat_bersejarah#kesini"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
+                        <li><a href="category.php?category=warisan_budaya#kesini"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
+                        <li><a href="category.php?category=resort#kesini"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,31 +1,29 @@
 <?php
 include 'koneksi.php';
 include 'wisata.php';
-$gunungList = array(); 
+$gunungList = array();
 $pantaiList = array();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $searchTerm = $_POST["search"];
+$tempatBersejarahList = array();
+$warisanBudayaList = array();
+$resortList = array();
 
-    // Fetch data from the "gunung" table based on the search term in Nama Gunung or Lokasi
-    $sqlGunung = "SELECT * FROM gunung WHERE `nama` LIKE '%$searchTerm%' OR `lokasi` LIKE '%$searchTerm%'";
-    $resultGunung = $conn->query($sqlGunung);
+$searchTerm = $_POST["search"];
 
-    if ($resultGunung->num_rows > 0) {
-        while ($row = $resultGunung->fetch_assoc()) {
-            $gunungList[] = new Wisata($row['nama'], $row['lokasi'], $row['deskripsi'], $row['fasilitas'], $row['harga'], $row['aktivitas'], $row['gambar']);
-        }
-    }
+$searchEngine = new SearchEngine($conn);
 
-    // Fetch data from the "pantai" table based on the search term in Nama Pantai or Lokasi
-    $sqlPantai = "SELECT * FROM pantai WHERE `nama` LIKE '%$searchTerm%' OR `lokasi` LIKE '%$searchTerm%'";
-    $resultPantai = $conn->query($sqlPantai);
+$gunungList = $searchEngine->search($searchTerm, "gunung");
+$pantaiList = $searchEngine->search($searchTerm, "pantai");
+$tempatBersejarahList = $searchEngine->search($searchTerm, "tempat_bersejarah");
+$warisanBudayaList = $searchEngine->search($searchTerm, "warisan_budaya");
+$resortList = $searchEngine->search($searchTerm, "resort");
 
-    if ($resultPantai->num_rows > 0) {
-        while ($row = $resultPantai->fetch_assoc()) {
-            $pantaiList[] = new Wisata($row['nama'], $row['lokasi'], $row['deskripsi'], $row['fasilitas'], $row['harga'], $row['aktivitas'], $row['gambar']);
-        }
-    }
-}
+
+$gunungRenderer = new ResultRenderer($gunungList);
+$pantaiRenderer = new ResultRenderer($pantaiList);
+$resortRenderer = new ResultRenderer($resortList);
+$tempatBersejarahRenderer = new ResultRenderer($tempatBersejarahList);
+$warisanBudayaRenderer = new ResultRenderer($warisanBudayaList);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -107,9 +105,9 @@ https://templatemo.com/tm-564-plot-listing
                     <ul class="categories">
                         <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
                         <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp; Pulau</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
-                        <li><a href="#"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
+                        <li><a href="category.php?category=tempat_bersejarah#kesini"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
+                        <li><a href="category.php?category=warisan_budaya#kesini"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
+                        <li><a href="category.php?category=resort#kesini"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,65 +127,11 @@ https://templatemo.com/tm-564-plot-listing
                        <div class="item">
                             <div class="row">
                                 <?php
-                                // Tampilkan hasil pencarian Gunung
-                                    foreach ($gunungList as $wisata) {
-                                        echo '<div class="col-lg-12">';
-                                        echo '<div class="listing-item">';
-                                        echo '<div class="left-image">';
-                                        echo '<a href="#"><img src="assets/images/' . $wisata->gambar . '" alt="" width="350" height="300"></a>';
-                                        echo '</div>';
-                                        echo '<div class="right-content align-self-center">';
-                                        echo '<a href="#">';
-                                        echo '<h4>' . $wisata->nama . '</h4>';
-                                        echo '</a>';
-                                        echo '<ul class="rate">';
-                                        // ... (tambahkan bintang sesuai rating)
-                                        echo '<li>(100) Reviews</li>';
-                                        echo '</ul>';
-                                        echo '<span class="price">';
-                                        echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp.' . $wisata->harga . '';
-                                        echo '</span>';
-                                        echo '<span class="details">Details: <em> <br>' . $wisata->deskripsi . '</em></span>';
-                                        echo '<ul class="info">';
-                                        // ... (tambahkan informasi lainnya)
-                                        echo '</ul>';
-                                        echo '<div class="main-white-button">';
-                                        echo '<a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                    }
-
-                                    // Tampilkan hasil pencarian Pantai
-                                    foreach ($pantaiList as $wisata) {
-                                        echo '<div class="col-lg-12">';
-                                        echo '<div class="listing-item">';
-                                        echo '<div class="left-image">';
-                                        echo '<a href="#"><img src="assets/images/' . $wisata->gambar . '" alt="" width="350" height="300"></a>';
-                                        echo '</div>';
-                                        echo '<div class="right-content align-self-center">';
-                                        echo '<a href="#">';
-                                        echo '<h4>' . $wisata->nama . '</h4>';
-                                        echo '</a>';
-                                        echo '<ul class="rate">';
-                                        // ... (tambahkan bintang sesuai rating)
-                                        echo '<li>(100) Reviews</li>';
-                                        echo '</ul>';
-                                        echo '<span class="price">';
-                                        echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp.' . $wisata->harga . '';
-                                        echo '</span>';
-                                        echo '<span class="details">Details: <em> <br>' . $wisata->deskripsi . '</em></span>';
-                                        echo '<ul class="info">';
-                                        // ... (tambahkan informasi lainnya)
-                                        echo '</ul>';
-                                        echo '<div class="main-white-button">';
-                                        echo '<a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                    }
+                                    $gunungRenderer->render();
+                                    $pantaiRenderer->render();
+                                    $resortRenderer->render();
+                                    $tempatBersejarahRenderer->render();
+                                    $warisanBudayaRenderer->render();
                                 ?>
                             </div>
                         </div>
