@@ -100,25 +100,25 @@ https://templatemo.com/tm-564-plot-listing
                     <div class="first-thumb active">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                        Apartments
+                        Gunung
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
                         <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                        Food &amp; Life
+                        Pantai &amp; Pulau
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                        Cars
+                        Kota Bersejarah
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">                 
                         <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
-                        Traveling
+                        Warisan Budaya
                       </div>
                     </div>
                   </div>
