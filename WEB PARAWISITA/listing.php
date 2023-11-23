@@ -114,7 +114,11 @@ https://templatemo.com/tm-564-plot-listing
                     </div>
                     <div>
                       <div class="thumb">                 
+<<<<<<< HEAD:WEB PARAWISITA/listing.php
                         <span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt=""></span>
+=======
+                        <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
+>>>>>>> 41ad39c51ae97002a7ffe066b0584344b6c0bae3:WEB PARAWISITA/listing.php
                         Kota Bersejarah
                       </div>
                     </div>
