@@ -5,8 +5,8 @@ include 'koneksi.php';
 include 'wisata.php';
 
 // Fetch data from the "wisata" table
-$sql = "SELECT * FROM gunung";
-$result = $conn->query($sql);
+$sqlGunung = "SELECT * FROM gunung";
+$result = $conn->query($sqlGunung);
 
 $wisataList = array();
 
@@ -378,7 +378,7 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
-                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="400" height="350"></a>';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="300" height="250"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
                                                         echo '<a href="#">';
@@ -395,9 +395,9 @@ https://templatemo.com/tm-564-plot-listing
                                                         echo '</ul>';
                                                         echo '<span class="price">';
                                                             echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt="">';
-                                                            echo '</div> text';
+                                                            echo '</div> Rp.'. $wisata->harga .'';
                                                         echo '</span>';
-                                                        echo '<span class="details">Details: <em>2760 sq ft</em></span>';
+                                                        echo '<span class="details">Details: <em> <br>'. $wisata->deskripsi .'</em></span>';
                                                         echo '<ul class="info">';
                                                             echo '<li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>';
                                                             echo '<li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms';
@@ -419,108 +419,50 @@ https://templatemo.com/tm-564-plot-listing
                         </div>
                         <div class="item">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="listing-item">
-                                        <div class="left-image">
-                                            <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
-                                        </div>
-                                        <div class="right-content align-self-center">
-                                            <a href="#">
-                                                <h4>4. Sunshine Fourth Apartment</h4>
-                                            </a>
-                                            <h6>by: Sale Agent</h6>
-                                            <ul class="rate">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li>(24) Reviews</li>
-                                            </ul>
-                                            <span class="price">
-                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt="">
-                                                </div> $3,600 / month with taxes
-                                            </span>
-                                            <span class="details">Details: <em>3660 sq ft</em></span>
-                                            <ul class="info">
-                                                <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
-                                                <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms
-                                                </li>
-                                            </ul>
-                                            <div class="main-white-button">
-                                                <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="listing-item">
-                                        <div class="left-image">
-                                            <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                                        </div>
-                                        <div class="right-content align-self-center">
-                                            <a href="#">
-                                                <h4>5. Best House Of the Town</h4>
-                                            </a>
-                                            <h6>by: Sale Agent</h6>
-                                            <ul class="rate">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li>(32) Reviews</li>
-                                            </ul>
-                                            <span class="price">
-                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt="">
-                                                </div> $5,600 / month with taxes
-                                            </span>
-                                            <span class="details">Details: <em>1750 sq ft</em></span>
-                                            <ul class="info">
-                                                <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
-                                                <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms
-                                                </li>
-                                            </ul>
-                                            <div class="main-white-button">
-                                                <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="listing-item">
-                                        <div class="left-image">
-                                            <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                                        </div>
-                                        <div class="right-content align-self-center">
-                                            <a href="#">
-                                                <h4>6. Amazing Pool Party Villa</h4>
-                                            </a>
-                                            <h6>by: Sale Agent</h6>
-                                            <ul class="rate">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li>(40) Reviews</li>
-                                            </ul>
-                                            <span class="price">
-                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt="">
-                                                </div> $3,850 / month with taxes
-                                            </span>
-                                            <span class="details">Details: <em>3660 sq ft</em></span>
-                                            <ul class="info">
-                                                <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
-                                                <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms
-                                                </li>
-                                            </ul>
-                                            <div class="main-white-button">
-                                                <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <?php
+                                    $counter = 4;
+                                    foreach ($wisataList as $wisata) {
+                                        if ($counter < 7) {
+                                            echo '<div class="col-lg-12">';
+                                                echo '<div class="listing-item">';
+                                                    echo '<div class="left-image">';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="300" height="250"></a>';
+                                                    echo '</div>';
+                                                    echo '<div class="right-content align-self-center">';
+                                                        echo '<a href="#">';
+                                                            echo '<h4>' . $counter .'. '. $wisata->nama . '</h4>';
+                                                        echo '</a>';
+                                                        echo '<ul class="rate">';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li><i class="fa fa-star-o"></i></li>';
+                                                            echo '<li>(100) Reviews</li>';
+                                                        echo '</ul>';
+                                                        echo '<span class="price">';
+                                                            echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt="">';
+                                                            echo '</div> Rp.'. $wisata->harga .'';
+                                                        echo '</span>';
+                                                        echo '<span class="details">Details: <em> <br>'. $wisata->deskripsi .'</em></span>';
+                                                        echo '<ul class="info">';
+                                                            echo '<li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>';
+                                                            echo '<li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms';
+                                                            echo '</li>';
+                                                        echo '</ul>';
+                                                        echo '<div class="main-white-button">';
+                                                            echo '<a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>';
+                                                        echo '</div>';
+                                                    echo '</div>';
+                                                echo '</div>';
+                                            echo '</div>';
+                                            $counter++;
+                                        } else {
+                                            break; // Exit the loop after displaying three items
+                                        }
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="item">
