@@ -380,11 +380,20 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-listing">
-                        <div class="item">
-                            <div class="row">
-                                <?php
+                        <?php
+                        for ($i = 1; $i <= 3; $i++){
+                            
+                            if ($i == 1){
+                                $kategori = $gunungList;
+                            }elseif($i == 2){
+                                $kategori = $pantaiList;
+                            }else{
+                                $kategori = $gunungList;
+                            }
+                            echo '<div class="item">';
+                            echo '<div class="row">';
                                     $counter = 1;
-                                    foreach ($gunungList as $wisata) {
+                                    foreach ($kategori as $wisata) {
                                         if ($counter < 4) {
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
@@ -437,7 +446,7 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
-                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="360" height="360"></a>';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="400" height="350"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
                                                         echo '<a href="#">';
@@ -485,7 +494,7 @@ https://templatemo.com/tm-564-plot-listing
                                             echo '<div class="col-lg-12">';
                                                 echo '<div class="listing-item">';
                                                     echo '<div class="left-image">';
-                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="360" height="360"></a>';
+                                                        echo '<a href="#"><img src="assets/images/'. $wisata->gambar .'" alt="" width="300" height="250"></a>';
                                                     echo '</div>';
                                                     echo '<div class="right-content align-self-center">';
                                                         echo '<a href="#">';
