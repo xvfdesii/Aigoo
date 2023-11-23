@@ -2,9 +2,7 @@
 
 Website Parawisata
 
-Ketua = Chalifahdien Hamud
-<<<<<<< HEAD
-=======
+# Ketua = Chalifahdien Hamud
 
 Anggota =
 
