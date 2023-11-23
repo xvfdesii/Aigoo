@@ -179,7 +179,7 @@ https://templatemo.com/tm-564-plot-listing
                 <div class="col-lg-12">
                     <div class="section-heading">
                         <h2>Popular Categories</h2>
-                        <h6>Check Them Out</h6>
+                        <h6>Tempat Pariwisata Populer</h6>
                     </div>
                 </div>
                 <div class="col-lg-12">
