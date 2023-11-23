@@ -8,7 +8,8 @@ Anggota = 1. Dwi Pratiwi
           3. Wa Ode Asriyani
           4. Rafli Ahmad
           5. Nuzul Gusti
-          6. Nur Hafizah 
+          6. Nur Hafizah
           7. Israwal
+        
 
 
