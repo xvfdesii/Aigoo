@@ -20,6 +20,31 @@ class Wisata {
     }
 }
 
+class MesinPencarianTabel {
+    private $koneksi;
+    private $namaTabel;
+
+    public function __construct($conn, $namaTabel) {
+        $this->koneksi = $conn;
+        $this->namaTabel = $namaTabel;
+    }
+
+    public function cariSemua() {
+        $hasilPencarian = array();
+
+        $sql = "SELECT * FROM $this->namaTabel LIMIT 3";
+        $result = $this->koneksi->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $hasilPencarian[] = new Wisata($row['nama'], $row['lokasi'], $row['deskripsi'], $row['fasilitas'], $row['harga'], $row['aktivitas'], $row['gambar']);
+            }
+        }
+
+        return $hasilPencarian;
+    }
+}
+
 class SearchEngine {
     private $conn;
 
