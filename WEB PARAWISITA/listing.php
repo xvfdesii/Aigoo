@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 
   <head>
@@ -74,6 +75,7 @@ https://templatemo.com/tm-564-plot-listing
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
+  
 
   <div class="page-heading">
     <div class="container">
@@ -87,6 +89,7 @@ https://templatemo.com/tm-564-plot-listing
       </div>
     </div>
   </div>
+  
 
   <div class="listing-page">
     <div class="container">
@@ -99,26 +102,32 @@ https://templatemo.com/tm-564-plot-listing
                   <div class="menu">
                     <div class="first-thumb active">
                       <div class="thumb">
-                        <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                        Apartments
+                        <span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt=""></span>
+                        Gunung
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                        Food &amp; Life
+                        <span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt=""></span>
+                        Pantai &amp; Pulau
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                        Cars
+                        <span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt=""></span>
+                        Kota Bersejarah
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
-                        Traveling
+                        <span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt=""></span>
+                        Warisan Budaya
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb mt-4">                 
+                        <span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt=""></span>
+                        Pantai &amp; Pulau
                       </div>
                     </div>
                   </div>
@@ -126,6 +135,9 @@ https://templatemo.com/tm-564-plot-listing
                 <div class="col-lg-9">
                   <ul class="nacc">
                   <!-- first category listing of items -->
+                  <?php
+	$connect=mysqli_connect("localhost","root","","db_pariwisata");
+	?>
                     <li class="active">
                       <div>
                         <div class="col-lg-12">
@@ -133,9 +145,14 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="item">
                               <div class="row">
                                 <div class="col-lg-12">
+                                <?php
+                                $sql="SELECT * From gunung where id=1";
+                                $hasil=mysqli_query($connect,$sql);
+                                $data=mysqli_fetch_row($hasil)
+                                ?>
                                   <div class="listing-item">
                                     <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
+                                      <a href="#"><img src="assets/images/<?php echo $data[7]; ?>"  alt=""  style="width: 100%;"></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
                                           <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
@@ -143,18 +160,23 @@ https://templatemo.com/tm-564-plot-listing
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Sunshine Paradise Apartment</h4></a>
-                                      <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <a href="#"><h4><?php echo $data[1]; ?></h4></a>
+                                      <h6><?php echo $data[2]; ?></h6>
+                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>Rp <?php echo $data[5]; ?></span>
+                                      <span class="details">Deskripsi: <em><?php echo $data[3]; ?></em></span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> <?php echo $data[4]; ?><br></span>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="col-lg-12">
+                                <?php
+                                $sql="SELECT * From gunung where id=2";
+                                $hasil=mysqli_query($connect,$sql);
+                                $data=mysqli_fetch_row($hasil)
+                                ?>
                                   <div class="listing-item">
                                     <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
+                                      <a href="#"><img src="assets/images/<?php echo $data[7]; ?>" alt=""  style="width: 100%;" ></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
                                           <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
@@ -162,18 +184,23 @@ https://templatemo.com/tm-564-plot-listing
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Best one in this category</h4></a>
+                                      <a href="#"><h4><?php echo $data[2]; ?></h4></a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $800 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> <?php echo $data[5]; ?></span>
+                                      <span class="details">Details: <em><?php echo $data[3]; ?></em></span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> <?php echo $data[4]; ?><br></span>
                                     </div>
                                   </div>
                                 </div>
+                                <?php
+                                $sql="SELECT * From gunung where id=3";
+                                $hasil=mysqli_query($connect,$sql);
+                                $data=mysqli_fetch_row($hasil)
+                                ?>
                                 <div class="col-lg-12">
                                   <div class="listing-item">
                                     <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
+                                      <a href="#"><img src="assets/images/<?php echo $data[7]; ?>" alt=""  style="width: 100%;"></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
                                           <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
@@ -181,11 +208,11 @@ https://templatemo.com/tm-564-plot-listing
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Amazing Dj Party House</h4></a>
-                                      <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $950 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <a href="#"><h4><?php echo $data[1]; ?></h4></a>
+                                      <h6><?php echo $data[2]; ?></h6>
+                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> <?php echo $data[5]; ?></span>
+                                      <span class="details">Details: <em><?php echo $data[3]; ?></em></span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> <?php echo $data[4]; ?><br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
