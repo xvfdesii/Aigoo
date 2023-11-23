@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
+
 <head>
 
     <meta charset="UTF-8">
@@ -433,13 +434,13 @@ https://templatemo.com/tm-564-plot-listing
                                         } else {
                                             break; // Exit the loop after displaying three items
                                         }
-                                    }
+                                    }}
                                 ?>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <?php
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <?php
                                     $counter = 4;
                                     foreach ($pantaiList as $wisata) {
                                         if ($counter < 7) {
@@ -483,11 +484,11 @@ https://templatemo.com/tm-564-plot-listing
                                         }
                                     }
                                 ?>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <?php
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <?php
                                     $counter = 7;
                                     foreach ($gunungList as $wisata) {
                                         if ($counter < 10) {
@@ -531,12 +532,12 @@ https://templatemo.com/tm-564-plot-listing
                                         }
                                     }
                                 ?>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
 
