@@ -10,7 +10,7 @@ Anggota =
 2. Umar Faruq Manek
 3. Wa Ode Asriyani
 4. Rafli Ahmad
-5. Nuzul Gusti
+5. Nuzul Gusti Tiara Fitri
 6. Nur Hafiizah
 7. Muh Irhan Israwal
 8. Harnelia
