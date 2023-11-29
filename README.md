@@ -2,7 +2,7 @@
 
 Website Parawisata
 
-# Ketua = Chalifahdien Hamud
+# Ketua = Chalifahdien Hamud (E1E122047)
 
 Anggota =
 
