@@ -7,7 +7,7 @@ Website Parawisata
 Anggota =
 
 1. Dwi Pratiwi
-2. Umar Faruq Manek
+2. Umar Faruq Manekk
 3. Wa Ode Asriyani
 4. Rafli Ahmad
 5. Nuzul Gusti Tiara Fitri
