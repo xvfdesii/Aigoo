@@ -16,9 +16,11 @@ if ($result->num_rows > 0) {
         $wisataList[] = new Wisata($row['nama'], $row['lokasi'], $row['deskripsi'], $row['fasilitas'], $row['harga'], $row['aktivitas'], $row['gambar']);
     }
 }
+$categoryRender = new ResultRenderer($wisataList);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -66,7 +68,7 @@ https://templatemo.com/tm-564-plot-listing
                             <span>Menu</span>
                         </a>
                         <!-- ***** Menu End ***** -->
-                            <!-- Form for search -->
+                        <!-- Form for search -->
                     </nav>
                 </div>
             </div>
@@ -84,11 +86,20 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-lg-10 offset-lg-1">
                     <ul class="categories">
-                        <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
-                        <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp; Pulau</a></li>
-                        <li><a href="category.php?category=tempat_bersejarah#kesini"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
-                        <li><a href="category.php?category=warisan_budaya#kesini"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
-                        <li><a href="category.php?category=resort#kesini"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
+                        <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img
+                                        src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
+                        <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img
+                                        src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp;
+                                Pulau</a></li>
+                        <li><a href="category.php?category=tempat_bersejarah#kesini"><span class="icon"><img
+                                        src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota
+                                Bersejarah</a></li>
+                        <li><a href="category.php?category=warisan_budaya#kesini"><span class="icon"><img
+                                        src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan
+                                budaya</a></li>
+                        <li><a href="category.php?category=resort#kesini"><span class="icon"><img
+                                        src="assets/images/resort-svgrepo-com.svg" alt="Travel"></span> Resort &amp;
+                                Spa</a></li>
                     </ul>
                 </div>
             </div>
@@ -106,38 +117,11 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-listing">
-                       <div class="item">
+                        <div class="item">
                             <div class="row">
                                 <?php
                                 // Tampilkan hasil pencarian Gunung
-                                    foreach ($wisataList as $wisata) {
-                                        echo '<div class="col-lg-12">';
-                                        echo '<div class="listing-item">';
-                                        echo '<div class="left-image">';
-                                        echo '<a href="#"><img src="assets/images/' . $wisata->gambar . '" alt="" width="350" height="300"></a>';
-                                        echo '</div>';
-                                        echo '<div class="right-content align-self-center">';
-                                        echo '<a href="#">';
-                                        echo '<h4>' . $wisata->nama . '</h4>';
-                                        echo '</a>';
-                                        echo '<ul class="rate">';
-                                        // ... (tambahkan bintang sesuai rating)
-                                        echo '<li>(100) Reviews</li>';
-                                        echo '</ul>';
-                                        echo '<span class="price">';
-                                        echo '<div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp.' . $wisata->harga . '';
-                                        echo '</span>';
-                                        echo '<span class="details">Details: <em> <br>' . $wisata->deskripsi . '</em></span>';
-                                        echo '<ul class="info">';
-                                        // ... (tambahkan informasi lainnya)
-                                        echo '</ul>';
-                                        echo '<div class="main-white-button">';
-                                        echo '<a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                    }
+                                $categoryRender->render();
                                 ?>
                             </div>
                         </div>
