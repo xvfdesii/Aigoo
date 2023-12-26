@@ -18,6 +18,6 @@ Anggota =
 10. Suci Wulandari
 11. Febri Haerani
 12. Muhammad Iqbal Bustang Panre
-13. Muh Fahreza Aryanta
+13. Muh Fahreza Aryanta u
 
 > > > > > > > 30708f0dd1763adb406db679fefd0ac452b0b1e6
