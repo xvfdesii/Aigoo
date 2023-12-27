@@ -6,7 +6,7 @@ Website Parawisata
 
 Anggota =
 
-1. Dwi Pratiwi
+1. Dwi Pratiwi Aprilya.w.
 2. Umar Faruq Manek 
 3. Wa Ode Asriyani
 4. Rafli Ahmad 
