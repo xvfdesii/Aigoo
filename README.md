@@ -14,7 +14,7 @@ Anggota =
 6. Nur Hafiizah
 7. Muh Irhan Israwal
 8. Harnelia
-9. Dela Puspita Helmi
+9. Dela Puspita
 10. Suci Wulandari
 11. Febri Haerani
 12. Muhammad Iqbal Bustang Panre
