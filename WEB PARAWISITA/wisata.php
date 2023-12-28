@@ -9,6 +9,8 @@ class Wisata {
     public $aktivitas;
     public $gambar;
 
+    
+
     public function __construct($nama, $lokasi, $deskripsi, $fasilitas, $harga, $aktivitas, $gambar) {
         $this->nama = $nama;
         $this->lokasi = $lokasi;
@@ -17,6 +19,31 @@ class Wisata {
         $this->harga = $harga;
         $this->aktivitas = $aktivitas;
         $this->gambar = $gambar;
+    }
+
+    public function getname(){
+        return $this->nama;
+    }
+    public function getdeskripsi (){
+        return $this->deskripsi;
+    }
+}
+
+class cari {
+    private $conn;
+    public function search($searchTerm, $table) {
+        $resultList = array();
+
+        $sql = "SELECT * FROM $table WHERE `nama` LIKE '%$searchTerm%' OR `lokasi` LIKE '%$searchTerm%'";
+        $result = $this->conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $resultList[] = new Wisata($row['nama'], $row['lokasi'], $row['deskripsi'], $row['fasilitas'], $row['harga'], $row['aktivitas'], $row['gambar']);
+            }
+        }
+
+        return $resultList;
     }
 }
 
