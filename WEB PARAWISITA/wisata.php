@@ -28,7 +28,9 @@ class Wisata {
         return $this->deskripsi;
     }
 }
+class sad{
 
+}
 class cari {
     private $conn;
     public function search($searchTerm, $table) {
