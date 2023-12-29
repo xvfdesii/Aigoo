@@ -20,40 +20,17 @@ class Wisata {
         $this->aktivitas = $aktivitas;
         $this->gambar = $gambar;
     }
-
-    public function getname(){
-        return $this->nama;
-    }
-    public function getdeskripsi (){
-        return $this->deskripsi;
-    }
-}
-class sad{
-
-}
-class cari {
-    private $conn;
-    public function search($searchTerm, $table) {
-        $resultList = array();
-
-        $sql = "SELECT * FROM $table WHERE `nama` LIKE '%$searchTerm%' OR `lokasi` LIKE '%$searchTerm%'";
-        $result = $this->conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $resultList[] = new Wisata($row['nama'], $row['lokasi'], $row['deskripsi'], $row['fasilitas'], $row['harga'], $row['aktivitas'], $row['gambar']);
-            }
-        }
-
-        return $resultList;
-    }
 }
 
-class MesinPencarianTabel {
-    private $koneksi;
-    private $namaTabel;
+// Kelas Renderer untuk Tempat Wisata
 
-    public function __construct($conn, $namaTabel) {
+class MesinPencarianTabel extends Wisata {
+    private $koneksi; //Encapsulasi Hanya Biasa Diakses Oleh Class MesinPencarianTabel
+    private $namaTabel; //Encapsulasi
+
+    public function __construct($conn, $namaTabel) { // constructor
+        parent::__construct('', '', '', '', '', '', ''); 
+        // Cara memanggil konstruktor dari kelas induk (Wisata) dari dalam kelas anak (MesinPencarianTabel).
         $this->koneksi = $conn;
         $this->namaTabel = $namaTabel;
     }
@@ -74,10 +51,13 @@ class MesinPencarianTabel {
     }
 }
 
-class SearchEngine {
+
+class SearchEngine extends Wisata {
     private $conn;
 
     public function __construct($conn) {
+        parent::__construct("", "", "", "", "", "", "");
+        // Cara memanggil konstruktor dari kelas induk (Wisata) dari dalam kelas anak (SearchEngine).
         $this->conn = $conn;
     }
 
@@ -96,6 +76,7 @@ class SearchEngine {
         return $resultList;
     }
 }
+
 class ResultRenderer {
     private $wisataList;
 
