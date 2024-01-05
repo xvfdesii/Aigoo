@@ -102,7 +102,7 @@ https://templatemo.com/tm-564-plot-listing
             <div class="row">
                 <div class="col-lg-12">
                     <div class="top-text header-text">
-                        <h2>Temukan Wisata Favorit Anda</h2>
+                        <h2>Temukan Wisata Favorit Anda Disini</h2>
 
                     </div>
                 </div>
