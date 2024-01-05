@@ -27,6 +27,7 @@ $warisanBudayaRenderer = new ResultRenderer($warisanBudayaList);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -75,7 +76,7 @@ https://templatemo.com/tm-564-plot-listing
                             <span>Menu</span>
                         </a>
                         <!-- ***** Menu End ***** -->
-                            <!-- Form for search -->
+                        <!-- Form for search -->
                     </nav>
                 </div>
             </div>
@@ -93,7 +94,7 @@ https://templatemo.com/tm-564-plot-listing
         </div>
     </div>
     <!-- ***** Preloader End ***** -->
-       <div class="main-banner">
+    <div class="main-banner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -103,11 +104,20 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-lg-10 offset-lg-1">
                     <ul class="categories">
-                        <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
-                        <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp; Pulau</a></li>
-                        <li><a href="category.php?category=tempat_bersejarah#kesini"><span class="icon"><img src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota Bersejarah</a></li>
-                        <li><a href="category.php?category=warisan_budaya#kesini"><span class="icon"><img src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan budaya</a></li>
-                        <li><a href="category.php?category=resort#kesini"><span class="icon"><img src="assets/images/resort-svgrepo-com.svg"alt="Travel"></span> Resort &amp; Spa</a></li>
+                        <li><a href="category.php?category=Gunung#kesini"><span class="icon"><img
+                                        src="assets/images/mountain-svgrepo-com.svg" alt="Home"></span> Gunung</a></li>
+                        <li><a href="category.php?category=Pantai#kesini"><span class="icon"><img
+                                        src="assets/images/beach-lounge-svgrepo-com.svg" alt="Food"></span> Pantai &amp;
+                                Pulau</a></li>
+                        <li><a href="category.php?category=tempat_bersejarah#kesini"><span class="icon"><img
+                                        src="assets/images/old-monument-svgrepo-com.svg" alt="Vehicle"></span> Kota
+                                Bersejarah</a></li>
+                        <li><a href="category.php?category=warisan_budaya#kesini"><span class="icon"><img
+                                        src="assets/images/city-buildings-svgrepo-com.svg" alt="Shopping"></span>Warisan
+                                budaya</a></li>
+                        <li><a href="category.php?category=resort#kesini"><span class="icon"><img
+                                        src="assets/images/resort-svgrepo-com.svg" alt="Travel"></span> Resort &amp;
+                                Spa</a></li>
                     </ul>
                 </div>
             </div>
@@ -124,14 +134,14 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-listing">
-                       <div class="item">
+                        <div class="item">
                             <div class="row">
                                 <?php
-                                    $gunungRenderer->render();
-                                    $pantaiRenderer->render();
-                                    $resortRenderer->render();
-                                    $tempatBersejarahRenderer->render();
-                                    $warisanBudayaRenderer->render();
+                                $gunungRenderer->render();
+                                $pantaiRenderer->render();
+                                $resortRenderer->render();
+                                $tempatBersejarahRenderer->render();
+                                $warisanBudayaRenderer->render();
                                 ?>
                             </div>
                         </div>
@@ -204,6 +214,9 @@ https://templatemo.com/tm-564-plot-listing
             </div>
         </div>
     </footer>
+
+
+
 
 
     <!-- Scripts -->

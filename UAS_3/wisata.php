@@ -1,6 +1,7 @@
 <?php
 
-class Wisata {
+class Wisata
+{
     public $nama;
     public $lokasi;
     public $deskripsi;
@@ -9,9 +10,10 @@ class Wisata {
     public $aktivitas;
     public $gambar;
 
-    
 
-    public function __construct($nama, $lokasi, $deskripsi, $fasilitas, $harga, $aktivitas, $gambar) {
+
+    public function __construct($nama, $lokasi, $deskripsi, $fasilitas, $harga, $aktivitas, $gambar)
+    {
         $this->nama = $nama;
         $this->lokasi = $lokasi;
         $this->deskripsi = $deskripsi;
@@ -24,18 +26,21 @@ class Wisata {
 
 // Kelas Renderer untuk Tempat Wisata
 
-class MesinPencarianTabel extends Wisata {
+class MesinPencarianTabel extends Wisata
+{
     private $koneksi; //Encapsulasi Hanya Biasa Diakses Oleh Class MesinPencarianTabel
     private $namaTabel; //Encapsulasi
 
-    public function __construct($conn, $namaTabel) { // constructor
-        parent::__construct('', '', '', '', '', '', ''); 
+    public function __construct($conn, $namaTabel)
+    { // constructor
+        parent::__construct('', '', '', '', '', '', '');
         // Cara memanggil konstruktor dari kelas induk (Wisata) dari dalam kelas anak (MesinPencarianTabel).
         $this->koneksi = $conn;
         $this->namaTabel = $namaTabel;
     }
 
-    public function cariSemua() {
+    public function cariSemua()
+    {
         $hasilPencarian = array();
 
         $sql = "SELECT * FROM $this->namaTabel LIMIT 3";
@@ -52,16 +57,19 @@ class MesinPencarianTabel extends Wisata {
 }
 
 
-class SearchEngine extends Wisata {
+class SearchEngine extends Wisata
+{
     private $conn;
 
-    public function __construct($conn) {
+    public function __construct($conn)
+    {
         parent::__construct("", "", "", "", "", "", "");
         // Cara memanggil konstruktor dari kelas induk (Wisata) dari dalam kelas anak (SearchEngine).
         $this->conn = $conn;
     }
 
-    public function search($searchTerm, $table) {
+    public function search($searchTerm, $table)
+    {
         $resultList = array();
 
         $sql = "SELECT * FROM $table WHERE `nama` LIKE '%$searchTerm%' OR `lokasi` LIKE '%$searchTerm%'";
@@ -77,14 +85,54 @@ class SearchEngine extends Wisata {
     }
 }
 
-class ResultRenderer {
+class gunung extends wisata
+{
+    public function displayData()
+    {
+        $dataList = $this->getData();
+        foreach ($dataList as $data) {
+            echo "<h2>" . $data["nama"] . "</h2>";
+            echo "<p>Lokasi: " . $data["lokasi"] . "</p>";
+            // ... (menampilkan sisa informasi yang diinginkan)
+        }
+    }
+}
+
+// Penggunaan kelas untuk menampilkan data
+$gunungList = [
+    ["nama" => "Gunung A", "lokasi" => "Lokasi A"],
+    ["nama" => "Gunung B", "lokasi" => "Lokasi B"],
+    // ... (data lainnya)
+];
+
+$pantaiList = [
+    ["nama" => "Pantai A", "lokasi" => "Lokasi X"],
+    ["nama" => "Pantai B", "lokasi" => "Lokasi Y"],
+    // ... (data lainnya)
+];
+
+// Membuat objek Wisata untuk kategori Gunung dan Pantai
+$gunungRenderer = new Wisata($gunungList);
+$pantaiRenderer = new Wisata($pantaiList);
+
+// Menampilkan data
+echo "<h2>Data Gunung</h2>";
+$gunungRenderer->displayData();
+
+echo "<h2>Data Pantai</h2>";
+$pantaiRenderer->displayData();
+
+class ResultRenderer
+{
     private $wisataList;
 
-    public function __construct($wisataList) {
+    public function __construct($wisataList)
+    {
         $this->wisataList = $wisataList;
     }
 
-    public function render() {
+    public function render()
+    {
         foreach ($this->wisataList as $wisata) {
             echo '<div class="col-lg-12">';
             echo '<div class="listing-item">';
@@ -115,5 +163,6 @@ class ResultRenderer {
         }
     }
 }
+
 
 ?>
